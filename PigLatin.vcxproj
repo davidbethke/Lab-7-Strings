@@ -82,13 +82,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PigLatin.h" />
-    <ClInclude Include="PigLatinTest.h" />
+    <ClInclude Include="PigLatinTest.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PigLatin.cpp" />
-    <ClCompile Include="PigLatinTest.cpp" />
+    <ClCompile Include="PigLatinTest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

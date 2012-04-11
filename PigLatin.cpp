@@ -61,6 +61,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	std::getchar();
 #endif //_DEBUG
 #ifdef NDEBUG
+	/* small test
 	string dave="dave";
 	string dave2="dave,";
 	string every="every";
@@ -70,18 +71,25 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout<<endl;
 	printPig(every);
 	getchar();
+	*/
 	string sentence;
 	stringstream ss;
+	string word;
 	cout << "Enter a sentence to convert to Pig Latin:"<<endl;
-	while(getline(cin,sentence,' '))  //TODO requires ends on space
+	
+	//while(getline(cin,sentence)&& sentence !="quit")  //TODO requires ends on space
+	while(cin >> word && word !="quit")
 	{								// TODO determine sentence ending punctuation . ! ?
-		printPig(sentence);
+		//ss.str(sentence);
+		//ss>>word;
+		printPig(word);
 		cout << " ";
-		ss<<sentence<< " ";
+		ss<<word<< " ";
 	}
 	cout <<endl;
 	cout << "You entered:"<<endl;
 	cout << ss.str();
+	getchar();
 	getchar();
 #endif //NDEBUG
 
